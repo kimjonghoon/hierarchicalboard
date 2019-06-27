@@ -10,7 +10,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<jdk.version>1.8</jdk.version>
+		<jdk.version>11</jdk.version>
 	</properties>
 
 	<dependencies>
@@ -50,20 +50,22 @@
 		<finalName>hierarchicalboard</finalName>
 		<pluginManagement>
 			<plugins>
+				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.6.2</version>
+					<version>3.8.1</version>
 					<configuration>
 						<source>${jdk.version}</source>
 						<target>${jdk.version}</target>
 						<encoding>UTF-8</encoding>
 					</configuration>
 				</plugin>
+				<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-maven-plugin -->
 				<plugin>
 					<groupId>org.eclipse.jetty</groupId>
 					<artifactId>jetty-maven-plugin</artifactId>
-					<version>9.4.6.v20170531</version>
+					<version>9.4.19.v20190610</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

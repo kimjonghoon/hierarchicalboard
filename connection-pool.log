@@ -1,0 +1,8 @@
+Fri Jun 28 08:26:05 KST 2019 : ORA-00942: table or view does not exist
+
+Fri Jun 28 08:26:05 KST 2019 : Error Source : board/list.jsp : SQLException
+Fri Jun 28 08:26:05 KST 2019 : SQLState : 42000
+Fri Jun 28 08:26:05 KST 2019 : Message : ORA-00942: table or view does not exist
+
+Fri Jun 28 08:26:05 KST 2019 : Oracle Error Code : 942
+Fri Jun 28 08:26:05 KST 2019 : sql : SELECT articleno,indent,parent,title,regdate FROM (SELECT ROWNUM R, A.* FROM (SELECT articleno,level as indent,parent,title,regdate FROM hierarchy_article START WITH parent = 0 CONNECT BY PRIOR articleno = parent ORDER SIBLINGS BY articleno DESC) A) WHERE R BETWEEN ? AND ?
